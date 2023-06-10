@@ -38,12 +38,24 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RH-of-AyT">
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="43"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain"/>
+                            <connections>
+                                <action selector="searchDidPrassed:" destination="-1" eventType="touchUpInside" id="v4G-a5-Kd4"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="6RH-of-AyT" secondAttribute="bottom" id="Hhq-G4-e5b"/>
                         <constraint firstItem="vhE-k2-j7v" firstAttribute="top" secondItem="xBG-PF-LYq" secondAttribute="top" constant="10" id="LbG-E9-MkY"/>
+                        <constraint firstItem="6RH-of-AyT" firstAttribute="top" secondItem="xBG-PF-LYq" secondAttribute="top" id="P70-qd-xJH"/>
                         <constraint firstAttribute="bottom" secondItem="nYI-jN-Myv" secondAttribute="bottom" constant="11" id="TXO-AM-OC2"/>
+                        <constraint firstAttribute="trailing" secondItem="6RH-of-AyT" secondAttribute="trailing" id="TYe-hn-qjj"/>
                         <constraint firstItem="nYI-jN-Myv" firstAttribute="top" secondItem="xBG-PF-LYq" secondAttribute="top" constant="10" id="WhU-Hf-5Xq"/>
+                        <constraint firstItem="6RH-of-AyT" firstAttribute="leading" secondItem="xBG-PF-LYq" secondAttribute="leading" id="cSk-pG-oUT"/>
                         <constraint firstAttribute="bottom" secondItem="vhE-k2-j7v" secondAttribute="bottom" constant="12" id="mea-R6-9fq"/>
                         <constraint firstAttribute="trailing" secondItem="vhE-k2-j7v" secondAttribute="trailing" constant="16" id="mfN-zi-VCq"/>
                         <constraint firstAttribute="height" constant="43" id="nes-ay-kqZ"/>
@@ -128,7 +140,7 @@
                 <constraint firstItem="WZh-bh-ITC" firstAttribute="top" secondItem="xBG-PF-LYq" secondAttribute="bottom" constant="26" id="poS-Wf-HSB"/>
                 <constraint firstItem="k6W-dT-fsR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="s64-KD-Gf3"/>
             </constraints>
-            <point key="canvasLocation" x="512.79999999999995" y="-55.322338830584712"/>
+            <point key="canvasLocation" x="622" y="108"/>
         </view>
     </objects>
     <resources>

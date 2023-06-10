@@ -43,18 +43,22 @@ class HomeVC: UIViewController {
     @IBAction func sortDidPrassed(_ sender: Any) {
     }
    
+    @IBAction func searchDidPrassed(_ sender: Any) {
+        navigationController?.pushViewController(SearchVC(), animated: true)
+    }
+   
+    
     func bindLabelToViewModel() {
         vm.countProductBehavior.asObservable().map{ $0}.bind(to: self.countProductLabel.rx.text ).disposed(by: disposeBag)
     }
+    
     func configureDataCollection(){
       
       collectionView.delegate = self
       
       // Layout
-
       let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
              layout?.sectionInset = UIEdgeInsets(top: 20, left: 16 , bottom: 15, right: 16 )
-      
       
       let nibImage = UINib(nibName: "ProductCollectionViewCell", bundle: nil)
         collectionView.register(nibImage, forCellWithReuseIdentifier: "ProductCollectionViewCell")
@@ -79,10 +83,6 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     //CollectionViewCell
   
-    // if no there data the CollectionView  hidden
-//    func bindToHiddenCollectionView() {
-//        vm.isCollectionHiddenObservable.bind(to: self.photosView.rx.isHidden).disposed(by: disposeBag)
-//    }
     // Show Activity Loading
     func subscribeToLoading() {
         vm.loadingObserver.subscribe(onNext: { (isLoading) in

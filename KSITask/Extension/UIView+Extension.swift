@@ -45,8 +45,10 @@ extension UIView {
 extension UIView {
     
   
-  
-   
+    func roundCorners(with CACornerMask: CACornerMask, radius: CGFloat) {
+        self.layer.cornerRadius = radius
+        self.layer.maskedCorners = [CACornerMask]
+    }
     
     func shadow() {
         self.layer.cornerRadius = cornerRadius
@@ -57,78 +59,8 @@ extension UIView {
       self.layer.shadowColor = UIColor.gray.cgColor
         self.layer.masksToBounds = false
     }
-  
-  func presentChildVC(in parent: UIViewController, with vc: UIViewController)
-  { self.addSubview(vc.view)
-    vc.view.bounds = self.bounds
-    vc.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-    vc.didMove(toParent: parent)
-    vc.view.fillSuperView()
-    
-  }
-  
-  
-  func removeChildVC (with vc: UIViewController) {
-    vc.willMove(toParent: nil)
-    vc.view.removeFromSuperview()
-    vc.removeFromParent() }
-  
-  func fillSuperView(padding: UIEdgeInsets = .zero) {
-    translatesAutoresizingMaskIntoConstraints = false
-    if let superviewTopAnchor = superview?.topAnchor { topAnchor.constraint(equalTo: superviewTopAnchor, constant: padding.top).isActive = true }
-    if let superviewBottomAnchor = superview?.bottomAnchor { bottomAnchor.constraint(equalTo: superviewBottomAnchor, constant: -padding.bottom).isActive = true }
-    if let superviewLeadingAnchor = superview?.leadingAnchor { leadingAnchor.constraint(equalTo: superviewLeadingAnchor, constant: padding.left).isActive = true }
-    if let superviewTrailingAnchor = superview?.trailingAnchor { trailingAnchor.constraint(equalTo: superviewTrailingAnchor, constant: -padding.right).isActive = true } }
 
-
-
-
-
-
-
-
-
-  func addDottedLine() {
-      backgroundColor = UIColor.clear
-      
-      let shapeLayer = CAShapeLayer()
-      shapeLayer.strokeColor = UIColor.red.cgColor
-      shapeLayer.lineWidth = 0.5
-      shapeLayer.lineDashPattern = [4, 4] // [dash length, gap length]
-
-      let path = UIBezierPath()
-      path.move(to: CGPoint(x: 0, y: 0))
-      path.addLine(to: CGPoint(x: self.bounds.width + 40, y: 0))
-
-      shapeLayer.path = path.cgPath
-      clipsToBounds = true
-
-      // Add the shape layer as a sublayer to the view's layer
-      self.layer.addSublayer(shapeLayer)
-  }
-
-
-
-
-
-
-  
-    
-    func verticalGradient(_ startColor: UIColor, _ endColor: UIColor) {
-        let gradient = CAGradientLayer()
-        gradient.type = .axial
-        gradient.colors = [startColor, endColor]
-        gradient.locations = [0, 0.25, 1]
-        gradient.frame = self.bounds
-        self.layer.addSublayer(gradient)
-    }
-    
-
-    
-    func roundCorners(with CACornerMask: CACornerMask, radius: CGFloat) {
-        self.layer.cornerRadius = radius
-        self.layer.maskedCorners = [CACornerMask]
-    }
+ 
 }
 
 @IBDesignable class GradientView: UIView {
