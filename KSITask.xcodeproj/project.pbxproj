@@ -10,7 +10,6 @@
 		8A0727BF2A3488490006FFE3 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0727BD2A3488490006FFE3 /* PhotosCollectionViewCell.swift */; };
 		8A0727C02A3488490006FFE3 /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A0727BE2A3488490006FFE3 /* PhotosCollectionViewCell.xib */; };
 		8A1C46E02A32907B00539E49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C46DF2A32907B00539E49 /* AppDelegate.swift */; };
-		8A1C46E42A32907B00539E49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C46E32A32907B00539E49 /* ViewController.swift */; };
 		8A1C46E72A32907B00539E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A1C46E52A32907B00539E49 /* Main.storyboard */; };
 		8A1C46EA2A32907B00539E49 /* KSITask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A1C46E82A32907B00539E49 /* KSITask.xcdatamodeld */; };
 		8A1C46EC2A32907D00539E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A1C46EB2A32907D00539E49 /* Assets.xcassets */; };
@@ -31,6 +30,15 @@
 		8A6DB2932A32A606004DFEE0 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6DB2902A32A606004DFEE0 /* NetworkManger.swift */; };
 		8A6DB2982A32C23E004DFEE0 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6DB2962A32C23E004DFEE0 /* DetailsVC.swift */; };
 		8A6DB2992A32C23E004DFEE0 /* DetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A6DB2972A32C23E004DFEE0 /* DetailsVC.xib */; };
+		8AD028E42A38C437006C44C1 /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD028E22A38C437006C44C1 /* FavouriteVC.swift */; };
+		8AD028E52A38C437006C44C1 /* FavouriteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD028E32A38C437006C44C1 /* FavouriteVC.xib */; };
+		8AD028E72A38C500006C44C1 /* CustomTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD028E62A38C500006C44C1 /* CustomTabbar.swift */; };
+		8AD028ED2A38C69D006C44C1 /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD028EB2A38C69D006C44C1 /* CartVC.swift */; };
+		8AD028EE2A38C69D006C44C1 /* CartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD028EC2A38C69D006C44C1 /* CartVC.xib */; };
+		8AD028F32A38C6B8006C44C1 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD028F12A38C6B8006C44C1 /* ProfileVC.swift */; };
+		8AD028F42A38C6B8006C44C1 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD028F22A38C6B8006C44C1 /* ProfileVC.xib */; };
+		8AD028F92A38C704006C44C1 /* MartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD028F72A38C704006C44C1 /* MartVC.swift */; };
+		8AD028FA2A38C704006C44C1 /* MartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AD028F82A38C704006C44C1 /* MartVC.xib */; };
 		8AE649872A34B89500682779 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE649862A34B89500682779 /* DetailsViewModel.swift */; };
 		FAA7C31DE9573ADD64FF7610 /* Pods_KSITask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB49832B02B26000BCA23049 /* Pods_KSITask.framework */; };
 /* End PBXBuildFile section */
@@ -41,7 +49,6 @@
 		8A0727BE2A3488490006FFE3 /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
 		8A1C46DC2A32907B00539E49 /* KSITask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KSITask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A1C46DF2A32907B00539E49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8A1C46E32A32907B00539E49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8A1C46E62A32907B00539E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A1C46E92A32907B00539E49 /* KSITask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KSITask.xcdatamodel; sourceTree = "<group>"; };
 		8A1C46EB2A32907D00539E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +70,15 @@
 		8A6DB2902A32A606004DFEE0 /* NetworkManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 		8A6DB2962A32C23E004DFEE0 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		8A6DB2972A32C23E004DFEE0 /* DetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsVC.xib; sourceTree = "<group>"; };
+		8AD028E22A38C437006C44C1 /* FavouriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
+		8AD028E32A38C437006C44C1 /* FavouriteVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavouriteVC.xib; sourceTree = "<group>"; };
+		8AD028E62A38C500006C44C1 /* CustomTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabbar.swift; sourceTree = "<group>"; };
+		8AD028EB2A38C69D006C44C1 /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		8AD028EC2A38C69D006C44C1 /* CartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartVC.xib; sourceTree = "<group>"; };
+		8AD028F12A38C6B8006C44C1 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		8AD028F22A38C6B8006C44C1 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		8AD028F72A38C704006C44C1 /* MartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MartVC.swift; sourceTree = "<group>"; };
+		8AD028F82A38C704006C44C1 /* MartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MartVC.xib; sourceTree = "<group>"; };
 		8AE649862A34B89500682779 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		A6E275A73081FDCCC83F8D43 /* Pods-KSITask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KSITask.release.xcconfig"; path = "Target Support Files/Pods-KSITask/Pods-KSITask.release.xcconfig"; sourceTree = "<group>"; };
 		CB49832B02B26000BCA23049 /* Pods_KSITask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KSITask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				8A6DB28D2A32A5F9004DFEE0 /* NetworkManager */,
-				8A1C470B2A329FB700539E49 /* Model */,
 				8A1C46F62A3290ED00539E49 /* Applaction */,
 				8A1C46FA2A32912600539E49 /* Sences */,
 				8A1C46F92A32911B00539E49 /* New Group */,
@@ -153,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				8A1C46E52A32907B00539E49 /* Main.storyboard */,
-				8A1C46E32A32907B00539E49 /* ViewController.swift */,
+				8AD028E62A38C500006C44C1 /* CustomTabbar.swift */,
 			);
 			name = "New Group";
 			sourceTree = "<group>";
@@ -161,6 +176,10 @@
 		8A1C46FA2A32912600539E49 /* Sences */ = {
 			isa = PBXGroup;
 			children = (
+				8AD028F52A38C6E5006C44C1 /* Mart */,
+				8AD028E92A38C67F006C44C1 /* Cart */,
+				8AD028E82A38C679006C44C1 /* Profile */,
+				8AD028E02A38C423006C44C1 /* Favourite */,
 				8A33D6152A34DFFD0026F946 /* Search */,
 				8A6DB2952A32C226004DFEE0 /* Details */,
 				8A1C46FB2A32913000539E49 /* Home */,
@@ -171,6 +190,7 @@
 		8A1C46FB2A32913000539E49 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8A1C470B2A329FB700539E49 /* Model */,
 				8A33D61E2A34E1610026F946 /* ViewModel  */,
 				8A33D61F2A34E16F0026F946 /* View */,
 			);
@@ -274,6 +294,74 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		8AD028E02A38C423006C44C1 /* Favourite */ = {
+			isa = PBXGroup;
+			children = (
+				8AD028E12A38C427006C44C1 /* View */,
+			);
+			path = Favourite;
+			sourceTree = "<group>";
+		};
+		8AD028E12A38C427006C44C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8AD028E22A38C437006C44C1 /* FavouriteVC.swift */,
+				8AD028E32A38C437006C44C1 /* FavouriteVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8AD028E82A38C679006C44C1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8AD028EF2A38C6A2006C44C1 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		8AD028E92A38C67F006C44C1 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				8AD028EA2A38C684006C44C1 /* View */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		8AD028EA2A38C684006C44C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8AD028EB2A38C69D006C44C1 /* CartVC.swift */,
+				8AD028EC2A38C69D006C44C1 /* CartVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8AD028EF2A38C6A2006C44C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8AD028F12A38C6B8006C44C1 /* ProfileVC.swift */,
+				8AD028F22A38C6B8006C44C1 /* ProfileVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8AD028F52A38C6E5006C44C1 /* Mart */ = {
+			isa = PBXGroup;
+			children = (
+				8AD028F62A38C6F3006C44C1 /* View */,
+			);
+			path = Mart;
+			sourceTree = "<group>";
+		};
+		8AD028F62A38C6F3006C44C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8AD028F72A38C704006C44C1 /* MartVC.swift */,
+				8AD028F82A38C704006C44C1 /* MartVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8AE649842A34B86900682779 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,7 +444,11 @@
 				8A0727C02A3488490006FFE3 /* PhotosCollectionViewCell.xib in Resources */,
 				8A1C46EF2A32907D00539E49 /* LaunchScreen.storyboard in Resources */,
 				8A1C46FF2A32914200539E49 /* HomeVC.xib in Resources */,
+				8AD028FA2A38C704006C44C1 /* MartVC.xib in Resources */,
+				8AD028F42A38C6B8006C44C1 /* ProfileVC.xib in Resources */,
+				8AD028E52A38C437006C44C1 /* FavouriteVC.xib in Resources */,
 				8A1C470A2A32962800539E49 /* ProductCollectionViewCell.xib in Resources */,
+				8AD028EE2A38C69D006C44C1 /* CartVC.xib in Resources */,
 				8A1C47052A32930E00539E49 /* Color.xcassets in Resources */,
 				8A1C46EC2A32907D00539E49 /* Assets.xcassets in Resources */,
 				8A1C46E72A32907B00539E49 /* Main.storyboard in Resources */,
@@ -416,6 +508,8 @@
 				8A1C47022A32915C00539E49 /* UIView+Extension.swift in Sources */,
 				8A6DB2982A32C23E004DFEE0 /* DetailsVC.swift in Sources */,
 				8A6DB28C2A32A5B6004DFEE0 /* HomeViewModel.swift in Sources */,
+				8AD028F32A38C6B8006C44C1 /* ProfileVC.swift in Sources */,
+				8AD028F92A38C704006C44C1 /* MartVC.swift in Sources */,
 				8A1C46F82A32910B00539E49 /* AppFlowCoordinator.swift in Sources */,
 				8A33D6192A34E0130026F946 /* SearchViewModel.swift in Sources */,
 				8A0727BF2A3488490006FFE3 /* PhotosCollectionViewCell.swift in Sources */,
@@ -424,11 +518,13 @@
 				8A33D61C2A34E0300026F946 /* SearchVC.swift in Sources */,
 				8A6DB2932A32A606004DFEE0 /* NetworkManger.swift in Sources */,
 				8A1C46FE2A32914200539E49 /* HomeVC.swift in Sources */,
-				8A1C46E42A32907B00539E49 /* ViewController.swift in Sources */,
 				8A1C470D2A329FD700539E49 /* ProductsInfo.swift in Sources */,
 				8AE649872A34B89500682779 /* DetailsViewModel.swift in Sources */,
 				8A1C46E02A32907B00539E49 /* AppDelegate.swift in Sources */,
+				8AD028ED2A38C69D006C44C1 /* CartVC.swift in Sources */,
+				8AD028E42A38C437006C44C1 /* FavouriteVC.swift in Sources */,
 				8A1C46EA2A32907B00539E49 /* KSITask.xcdatamodeld in Sources */,
+				8AD028E72A38C500006C44C1 /* CustomTabbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

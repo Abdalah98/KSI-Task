@@ -18,8 +18,8 @@ final class AppFlowCoordinator {
 
     func start() {
 
-      let mainViewController = HomeVC()
-      navigationController.pushViewController(mainViewController, animated: true)
+        let customTabBarController = CustomTabbar()
+      navigationController.pushViewController(customTabBarController, animated: true)
     }
 
 

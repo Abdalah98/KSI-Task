@@ -14,19 +14,15 @@ class DetailsViewModel {
     var titleProductBehavior              = BehaviorRelay<String>(value: "")
     var detailsProductBehavior              = BehaviorRelay<String>(value: "")
     var nameProductBehavior              = BehaviorRelay<String>(value: "")
-    private let modelSubject             = PublishSubject<ProductsData>()
+    //private let modelSubject             = PublishSubject<ProductsData>()
         
-    private  var userProductsModelSubject = PublishSubject<[String]>()
+    private let dataSubject = BehaviorSubject<[String]>(value: [])
+
     
-    var  userProductsModelObservable: Observable<[String]> {return userProductsModelSubject}
-    
-    func receiveModel(_ model: ProductsData) {
-        modelSubject.onNext(model)
+    var dataObservable: Observable<[String]> {
+        return dataSubject.asObservable()
     }
-    
-    func observeModel() -> Observable<ProductsData> {
-        return modelSubject.asObservable()
-    }
+
     init() {
         
     }
@@ -39,7 +35,7 @@ class DetailsViewModel {
         self.titleProductBehavior.accept(productsData.category ?? "")
         self.detailsProductBehavior.accept(productsData.description ?? "")
         self.nameProductBehavior.accept(productsData.title )
-        self.userProductsModelSubject.onNext(productsData.images ?? [])
+        self.dataSubject.onNext(productsData.images ?? [])
 
         
     }

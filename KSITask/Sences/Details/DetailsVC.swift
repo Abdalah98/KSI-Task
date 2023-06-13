@@ -28,7 +28,6 @@ class DetailsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        vm.receiveModel(productData!)
 
         subscribeToResponseProduct()
         subscribeToProductSelection()
@@ -38,6 +37,7 @@ class DetailsVC: UIViewController {
         vm.titleProductBehavior.asObservable().map{ $0}.bind(to: self.descLabl.rx.text ).disposed(by: disposeBag)
         vm.nameProductBehavior.asObservable().map{ $0}.bind(to: self.nameLabl.rx.text ).disposed(by: disposeBag)
         vm.detailsProductBehavior.asObservable().map{ $0}.bind(to: self.detailsLabl.rx.text ).disposed(by: disposeBag)
+     
     }
    
     @IBAction func backDidPrssed(_ sender: Any) {
@@ -73,9 +73,8 @@ extension DetailsVC : UICollectionViewDelegate,UICollectionViewDelegateFlowLayou
 
     // MARK: UICollectionView
     func subscribeToResponseProduct() {
-        self.vm.userProductsModelObservable.bind(to: self.collctionView.rx.items(cellIdentifier:  "PhotosCollectionViewCell",  cellType:  PhotosCollectionViewCell.self)) { row, product, cell in
+        self.vm.dataObservable.bind(to: self.collctionView.rx.items(cellIdentifier:  "PhotosCollectionViewCell",  cellType:  PhotosCollectionViewCell.self)) { row, product, cell in
            cell.set(set: product)
-            print(product,"mmmm")
             cell.viewProduct.borderColor = self.selectedIndex == row ? .black : .gray
             
         }.disposed(by: disposeBag)
@@ -88,6 +87,7 @@ extension DetailsVC : UICollectionViewDelegate,UICollectionViewDelegateFlowLayou
             .bind { [weak self] selectedIndex, product in
                 guard let self = self else{return}
                 self.showSelectedImage(product)
+                print(selectedIndex)
             }.disposed(by: disposeBag)
     }
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -119,7 +119,7 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
             .bind { [weak self] selectedIndex, product in
                 guard let self = self else{return}
                 let vc = DetailsVC()
-                vc.productData = product
+                vc.vm.fetchProducts(productsData: product)
                 self.navigationController?.pushViewController(vc, animated: true)
             }.disposed(by: disposeBag)
     }
