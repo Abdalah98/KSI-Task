@@ -14,6 +14,8 @@ class DetailsViewModel {
     var titleProductBehavior              = BehaviorRelay<String>(value: "")
     var detailsProductBehavior              = BehaviorRelay<String>(value: "")
     var nameProductBehavior              = BehaviorRelay<String>(value: "")
+    var imageProductBehavior              = BehaviorRelay<String>(value: "")
+
     //private let modelSubject             = PublishSubject<ProductsData>()
         
     private let dataSubject = BehaviorSubject<[String]>(value: [])
@@ -36,7 +38,8 @@ class DetailsViewModel {
         self.detailsProductBehavior.accept(productsData.description ?? "")
         self.nameProductBehavior.accept(productsData.title )
         self.dataSubject.onNext(productsData.images ?? [])
-
+        self.imageProductBehavior.accept(productsData.thumbnail ??
+        "" )
         
     }
     

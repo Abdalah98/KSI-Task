@@ -8,7 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
-
+import Kingfisher
 
 class DetailsVC: UIViewController {
     @IBOutlet weak var imageSelect: UIImageView!
@@ -32,14 +32,28 @@ class DetailsVC: UIViewController {
         subscribeToResponseProduct()
         subscribeToProductSelection()
         ViewImag.shadow()
-        configureDataCollection()
         vm.pricseProductBehavior.asObservable().map{ $0}.bind(to: self.priceLabl.rx.text ).disposed(by: disposeBag)
         vm.titleProductBehavior.asObservable().map{ $0}.bind(to: self.descLabl.rx.text ).disposed(by: disposeBag)
         vm.nameProductBehavior.asObservable().map{ $0}.bind(to: self.nameLabl.rx.text ).disposed(by: disposeBag)
         vm.detailsProductBehavior.asObservable().map{ $0}.bind(to: self.detailsLabl.rx.text ).disposed(by: disposeBag)
-     
+        
+        vm.imageProductBehavior
+            .asObservable()
+            .compactMap { imageUrl -> URL? in
+                return URL(string: imageUrl)
+            }
+            .bind { [weak self] url in
+                self?.imageSelect.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.2))])
+            }
+            .disposed(by: disposeBag)
     }
-   
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureDataCollection()
+
+    }
+    
     @IBAction func backDidPrssed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -75,25 +89,33 @@ extension DetailsVC : UICollectionViewDelegate,UICollectionViewDelegateFlowLayou
     func subscribeToResponseProduct() {
         self.vm.dataObservable.bind(to: self.collctionView.rx.items(cellIdentifier:  "PhotosCollectionViewCell",  cellType:  PhotosCollectionViewCell.self)) { row, product, cell in
            cell.set(set: product)
-            cell.viewProduct.borderColor = self.selectedIndex == row ? .black : .gray
+             cell.viewProduct.borderColor = self.selectedIndex == row ? .black : .gray
             
         }.disposed(by: disposeBag)
     }
     
-    // when i itemSelected in  CollectionView pass data
-    func subscribeToProductSelection() {
-        Observable
-            .zip(collctionView.rx.itemSelected, collctionView.rx.modelSelected(String.self))
-            .bind { [weak self] selectedIndex, product in
-                guard let self = self else{return}
-                self.showSelectedImage(product)
-                print(selectedIndex)
-            }.disposed(by: disposeBag)
-    }
+  
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
       return CGSize(width: 70  , height:  70 )
     
   }
+    // when i itemSelected in  CollectionView
+    func subscribeToProductSelection() {
+        Observable
+              .zip(collctionView.rx.itemSelected, collctionView.rx.modelSelected(ProductsData.self))
+              .bind { [weak self] indexPath, product in
+                  guard let self = self else { return }
+                  self.showSelectedImage(product.thumbnail)
+                  print("indexPath")
+
+                  print(indexPath)
+              }
+              .disposed(by: disposeBag)
+        print("indexPath")
+
+    
+    }
+    
     func showSelectedImage(_ image: String?) {
         guard let imagePath = image, let url = URL(string: imagePath) else {
             imageSelect.image = nil
@@ -102,6 +124,6 @@ extension DetailsVC : UICollectionViewDelegate,UICollectionViewDelegateFlowLayou
         
         imageSelect.kf.setImage(with: url)
     }
-    
+
 
 }

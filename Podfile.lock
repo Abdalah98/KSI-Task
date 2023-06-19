@@ -1,11 +1,16 @@
 PODS:
   - Alamofire (5.7.1)
   - IQKeyboardManagerSwift (6.3.0)
-  - Kingfisher (7.7.0)
+  - Kingfisher (7.8.0)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - Realm (10.40.2):
+    - Realm/Headers (= 10.40.2)
+  - Realm/Headers (10.40.2)
+  - RealmSwift (10.40.2):
+    - Realm (= 10.40.2)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -17,6 +22,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (= 6.3.0)
   - Kingfisher (~> 7.0)
   - Moya (~> 15.0)
+  - RealmSwift
   - RxCocoa
   - RxSwift
 
@@ -26,6 +32,8 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Kingfisher
     - Moya
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -33,12 +41,14 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
   IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
-  Kingfisher: f043ac666dfc96c1f37604f93effb45a7ee3a3e1
+  Kingfisher: 0656e1b064bfc1ca1cd04e033f617a86559696e9
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  Realm: 731e86d9388287b18e36b0beb2493fc4845ce8a2
+  RealmSwift: c2a1059ba52e1e08467b1253b1d4ab354ef3177b
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: fea0e9b21357e60e882c74b84a02561184f6dabf
+PODFILE CHECKSUM: 5716a3ac2841b11f0bd0211960b26a166afeb4d8
 
 COCOAPODS: 1.12.1

@@ -56,7 +56,7 @@
                 <outlet property="imageProduct" destination="34r-An-Kjk" id="xda-qy-qa5"/>
                 <outlet property="viewProduct" destination="qsI-a1-MQM" id="DXU-WB-6mP"/>
             </connections>
-            <point key="canvasLocation" x="108" y="-11"/>
+            <point key="canvasLocation" x="107.69230769230769" y="-11.374407582938389"/>
         </collectionViewCell>
     </objects>
     <resources>

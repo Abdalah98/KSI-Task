@@ -121,15 +121,15 @@ extension SearchVC : UICollectionViewDelegate, UICollectionViewDelegateFlowLayou
     }
     
     // when i itemSelected in  CollectionView pass data
-    func subscribeToProductSelection() {
-        Observable
-            .zip(collctionView.rx.itemSelected, collctionView.rx.modelSelected(ProductsData.self))
-            .bind { [weak self] selectedIndex, product in
-                guard let self = self else{return}
-                let vc = DetailsVC()
-                vc.productData = product
-                self.navigationController?.pushViewController(vc, animated: true)
-            }.disposed(by: disposeBag)
-    }
+        func subscribeToProductSelection() {
+            Observable
+                .zip(collctionView.rx.itemSelected, collctionView.rx.modelSelected(ProductsData.self))
+                .bind { [weak self] selectedIndex, product in
+                    guard let self = self else{return}
+                    let vc = DetailsVC()
+                    vc.productData = product
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }.disposed(by: disposeBag)
+        }
 }
 

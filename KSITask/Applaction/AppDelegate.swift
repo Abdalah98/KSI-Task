@@ -7,7 +7,7 @@
 
 import UIKit
 import CoreData
-
+import RealmSwift
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -26,9 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navigationController
         appFlowCoordinator = AppFlowCoordinator(navigationController: navigationController)
         appFlowCoordinator?.start()
+        RealmConfiguration.configure()
       return true
     }
-
+  
 
 }
 
+class RealmConfiguration {
+    static func configure() {
+        let config = Realm.Configuration(schemaVersion: 1)
+        Realm.Configuration.defaultConfiguration = config
+        
+        // Uncomment the following line if you want to delete and recreate the Realm file on each app launch (for testing/development purposes).
+        // try! FileManager.default.removeItem(at: config.fileURL!)
+    }
+}
