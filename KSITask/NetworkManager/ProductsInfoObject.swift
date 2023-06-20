@@ -16,6 +16,7 @@ class ProductsInfoObject: Object {
 }
 
 class ProductsDataObject: Object {
+    
     @Persisted(primaryKey: true) var id: Int
     @Persisted var title: String
     @Persisted var descriptionText: String?
@@ -26,8 +27,9 @@ class ProductsDataObject: Object {
     @Persisted var brand: String?
     @Persisted var category: String?
     @Persisted var thumbnail: String?
-    @Persisted var images: List<String>?
-    
+//    var images = RealmOptional<Int>()
+   var images = List<String>()
+
     func toRealmObject() -> ProductsDataObject {
         return self
     }

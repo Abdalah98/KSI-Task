@@ -47,16 +47,6 @@ class HomeViewModel {
             }
                     })
                 }
-            //    func updateUserInterface() {
-            //        switch Network.reachability.status {
-            //        case .unreachable:
-            //            fetchPhotos()
-            //        case .wwan:
-            //            fetchPhotos()
-            //        case .wifi:
-            //            fetchPhotos()
-            //        }
-            //    }
             
         }
         

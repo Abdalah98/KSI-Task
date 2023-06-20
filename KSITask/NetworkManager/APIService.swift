@@ -13,7 +13,7 @@ enum APIService {
 
 extension APIService: TargetType {
     var baseURL: URL {
-        guard let url = URL(string: "https://run.mocky.io/v3") else { fatalError(ResoneError.invaldURL.rawValue) }
+        guard let url = URL(string: "https://run.mocky.io/v3") else { fatalError("erro url") }
         return url
     }
     

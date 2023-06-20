@@ -46,7 +46,7 @@ class SearchVC: UIViewController,UISearchBarDelegate {
     func bindToSearchValue() {
         searchController.searchBar.rx.text
             .distinctUntilChanged()
-            .bind(to:vm.searchValueObserver)
+            .bind(to:vm.searchValueBehavior)
             .disposed(by: disposeBag)
         searchController.searchBar.rx.cancelButtonClicked
             .subscribe(onNext: { () in
