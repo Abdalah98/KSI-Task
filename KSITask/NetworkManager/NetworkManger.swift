@@ -6,7 +6,7 @@
 
 import Foundation
 import Moya
-import RealmSwift
+
 enum ResoneError :String,Error{
     case invaldURL               = "This URL invalid request."
     case invalidData             = "The data received from the server was invalid. Please try again."

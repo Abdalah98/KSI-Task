@@ -11,6 +11,5 @@ target 'KSITask' do
     pod 'RxSwift'
     pod 'RxCocoa'
   pod 'Kingfisher', '~> 7.0'
-  pod 'RealmSwift'
 
 end
